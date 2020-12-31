@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .grid {
+            font-size: 24px;
+            gap: 10px;
+            grid-template-rows: repeat(1, 100px);
+        }
+        .grid-autoFill {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+        .item:nth-child(odd) {
+            background-color: #00cec9;
+        }
+        .item:nth-child(even) {
+            background-color: #a29bfe;
+        }
+    /**********************************************************************************/
+        .grid-autoFit {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Auto Fill</h1>
+    <div class="grid grid-autoFill">
+        <div class="item item-autoFill">1</div>
+        <div class="item item-autoFill">2</div>
+        <div class="item item-autoFill">3</div>
+        <div class="item item-autoFill">4</div>
+        <div class="item item-autoFill">5</div>
+
+    </div>
+    <h1>Auto Fit</h1>
+    <div class="grid grid-autoFit">
+        <div class="item item-autoFit">1</div>
+        <div class="item item-autoFit">2</div>
+        <div class="item item-autoFit">3</div>
+        <div class="item item-autoFit">4</div>
+        <div class="item item-autoFit">5</div>
+
+</body>
+
+</html>

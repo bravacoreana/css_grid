@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .grid {
+            font-size: 24px;
+            gap: 10px;
+            height: 10vh;
+            border: 1px solid black;
+        }
+        .grid-first{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            justify-items: stretch;
+            align-items: center;
+        }
+     /**********************************************************************************/
+        .grid-second {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            justify-items: end;
+            align-items: end;
+        }
+    /**********************************************************************************/
+
+        .grid-third {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            justify-items: stretch;
+            align-items: stretch;
+        }
+        .header-third {
+            width: 40px;
+            height: 40px;
+        }
+    /**********************************************************************************/
+
+        .grid-fourth {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            place-items: stretch center; /* Y X */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>0. Place Items : For Each square </h3>
+    <div class="grid grid-first">
+        <div class="header header-first">header</div>
+        <div class="content content-first">content</div>
+        <div class="nav nav-first">nav</div>
+        <div class="footer footer-first">footer</div>
+    </div>
+        <p class="code">
+            .grid-first {<br/>
+                grid-template-columns: repeat(4, 1fr);<br>
+                grid-template-rows: repeat(4, 1fr);<br>
+                justify-items: stretch; /* Default */ <br>
+                align-items: center;<br>
+            }<br/>
+        </p>
+    <div class="grid grid-second">
+        <div class="header header-second">header</div>
+        <div class="content content-second">content</div>
+        <div class="nav nav-second">nav</div>
+        <div class="footer footer-second">footer</div>
+    </div>
+        <p class="code">
+            .grid-second {<br/>
+            grid-template-columns: repeat(4, 1fr);<br>
+            grid-template-rows: repeat(4, 1fr);<br>
+            justify-items: end;<br>
+            align-items: end;<br>
+            }<br/>
+        </p>
+    <div class="grid grid-third">
+        <div class="header header-third"></div>
+        <div class="content content-third"></div>
+        <div class="nav nav-third"></div>
+        <div class="footer footer-third"></div>
+    </div>
+        <p class="code">
+            .grid-third { <br/>
+                grid-template-columns: repeat(4, 1fr);<br/>
+                grid-template-rows: repeat(1, 1fr);<br/>
+                justify-items: stretch;<br/>
+                align-items: stretch;<br/>
+            }<br/>
+            .header-third {<br/>
+                width: 40px;<br/>
+                height: 40px;<br/>
+            }<br/>
+        </p>
+    <h1>1. Place Items - SHORTCUT </h3>
+    <div class="grid grid-fourth">
+        <div class="header header-fourth">header</div>
+        <div class="content content-fourth">content</div>
+        <div class="nav nav-fourth">nav</div>
+        <div class="footer footer-fourth">footer</div>
+    </div>
+        <p class="code">
+            .grid-fourth {<br/>
+                grid-template-columns: repeat(4, 1fr);<br/>
+                grid-template-rows: repeat(1, 1fr);<br/>
+                <b>place-items: stretch center; </b>/* Y X */<br/>
+            }<br/>
+        </p>
+</body>
+
+</html>

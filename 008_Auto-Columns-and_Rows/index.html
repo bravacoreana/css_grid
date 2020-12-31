@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .grid-first {
+            font-size: 24px;
+            gap: 10px;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            grid-auto-rows: 140px;
+        }
+        .item:nth-child(odd) {
+            background-color: #00cec9;
+        }
+        .item:nth-child(even) {
+            background-color: #a29bfe;
+        }
+    /**********************************************************************************/
+        .grid-second {
+            font-size: 24px;
+            gap: 10px;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            grid-auto-flow: column;
+            grid-auto-columns: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Auto Columns and Rows </h1>
+    <h3>grid-auto-rows</h3>
+    <div class="grid grid-first">
+        <div class="item item-first">1</div>
+        <div class="item item-first">2</div>
+        <div class="item item-first">3</div>
+        <div class="item item-first">4</div>
+        <div class="item item-first">5</div>
+        <div class="item item-first">6</div>
+        <div class="item item-first">7</div>
+        <div class="item item-first">8</div>
+        <div class="item item-first">9</div>
+        <div class="item item-first">10</div>
+        <div class="item item-first">11</div>
+        <div class="item item-first">12</div>
+        <div class="item item-first">13</div>
+        <div class="item item-first">14</div>
+        <div class="item item-first">15</div>
+        <div class="item item-first">16</div>
+        <div class="item item-first">17</div>
+        <div class="item item-first">18</div>
+        <div class="item item-first">19</div>
+        <div class="item item-first">20</div>
+    </div>
+    <h3>grid-auto-flow</h3>
+    <div class="grid grid-second">
+        <div class="item item-second">1</div>
+        <div class="item item-second">2</div>
+        <div class="item item-second">3</div>
+        <div class="item item-second">4</div>
+        <div class="item item-second">5</div>
+        <div class="item item-second">6</div>
+        <div class="item item-second">7</div>
+        <div class="item item-second">8</div>
+        <div class="item item-second">9</div>
+        <div class="item item-second">10</div>
+        <div class="item item-second">11</div>
+        <div class="item item-second">12</div>
+        <div class="item item-second">13</div>
+        <div class="item item-second">14</div>
+        <div class="item item-second">15</div>
+        <div class="item item-second">16</div>
+        <div class="item item-second">17</div>
+        <div class="item item-second">18</div>
+        <div class="item item-second">19</div>
+        <div class="item item-second">20</div>
+    </div>
+</body>
+
+</html>

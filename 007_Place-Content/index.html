@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .grid {
+            font-size: 24px;
+            gap: 10px;
+        }
+
+        .grid-first {
+            height: 30vh;
+            background-color: #000;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            justify-content: center;
+        }
+
+        /**********************************************************************************/
+        .grid-second {
+            background-color: #000;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            height: 70vh;
+            align-content: space-around;
+        }
+
+        /**********************************************************************************/
+        .grid-third {
+            background-color: #000;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            height: 70vh;
+            place-content: center space-around;
+        }
+        /**********************************************************************************/
+
+        .grid-fourth {
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+        }
+        .header-fourth {
+            place-self: end center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>0. Place Content: For all squares together </h1>
+    <h3> Justify-content </h6>
+    <div class="grid grid-first">
+        <div class="header header-first">header</div>
+        <div class="content content-first">content</div>
+        <div class="nav nav-first">nav</div>
+        <div class="footer footer-first">footer</div>
+    </div>
+    <p> Justify-content : Moving only grid itself horizontally. Grid container is 100% of width.</p>
+    <p class="code">
+        justify-content: start; &nbsp;&nbsp;&nbsp;&nbsp; // default
+    </p>
+    <h3>Align-content </h3>
+    <div class="grid grid-second">
+        <div class="header header-second">header</div>
+        <div class="content content-second">content</div>
+        <div class="nav nav-second">nav</div>
+        <div class="footer footer-second">footer</div>
+    </div>
+    <p> Align-content : Moving only grid itself vertically. Grid container is 100% of width.<br />
+        if height of grid container is not big enough, it wouldn't be applied as I want.
+    </p>
+    <p class="code">
+        align-content: start; &nbsp;&nbsp;&nbsp;&nbsp; // default
+    </p>
+    <h3> place-content</h3>
+    <div class="grid grid-third">
+        <div class="header header-third">header</div>
+        <div class="content content-third">content</div>
+        <div class="nav nav-third">nav</div>
+        <div class="footer footer-third">footer</div>
+    </div>
+
+    <h1> place-self </h1>
+    <div class="grid grid-fourth">
+        <div class="header header-fourth">header</div>
+        <div class="content content-fourth">content</div>
+        <div class="nav nav-fourth">nav</div>
+        <div class="footer footer-fourth">footer</div>
+    </div>
+    <p class="code">
+        .header { place-self: end center; } <br/>
+        is equal to <br/>
+        .header { align-self: end; justify-self: center;} 
+
+    </p>
+
+
+
+
+</body>
+
+</html>
