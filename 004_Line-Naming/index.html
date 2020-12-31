@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .grid-first{
+            gap: 10px;
+            grid-template-columns: [first-line] 100px [second-line] 100px [third-line] 100px [fourth-line] 100px [fifth-line];
+            grid-template-rows: repeat(4, 100px [yeay-line]);
+                /* 100px [yeay-line] 100px [yeay-line] 100px [yeay-line] 100px [yeay-line] */
+        }
+        .header-first{
+            grid-column: span 4;
+        }
+        .content-first{
+            grid-column: first-line / fourth-line; /* Take space of the line : fourth-line has 100px. */
+            grid-row: yeay-line 1 / yeay-line 3;
+        }
+        .nav-first{
+            grid-row: yeay-line 1 / yeay-line 3;
+        }
+        .footer-first{
+            grid-column: first-line / fifth-line; /* Fifth-line doesn't have any space. It only works as a line. */
+        }
+
+    /**********************************************************************************/
+
+</style>
+</head>
+
+<body>
+    <h3>0. Give names in lines </h3>
+    <p>▶ repeat(4, 100px [yeay-line]) = 100px [yeay-line] 100px [yeay-line] 100px [yeay-line] 100px [yeay-line] </p>
+    <div class="grid grid-first">
+        <div class="header header-first"></div>
+        <div class="content content-first"></div>
+        <div class="nav nav-first"></div>
+        <div class="footer footer-first"></div>
+    </div>
+</body>
+
+</html>

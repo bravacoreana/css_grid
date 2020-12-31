@@ -1,0 +1,32 @@
+.grid {
+  display: grid;
+}
+.header {
+  background-color: #00cec9;
+}
+.content {
+  background-color: #ffeaa7;
+}
+.nav {
+  background-color: #fab1a0;
+}
+.footer {
+  background-color: #a29bfe;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 50px;
+}
+p {
+  font-size: 22px;
+}
+
+p.code {
+  background-color: rgb(230, 230, 230);
+  padding: 10px 20px;
+}

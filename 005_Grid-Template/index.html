@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .grid-first{
+            gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 100px);
+        }
+    /**********************************************************************************/
+        .grid-second{
+            gap: 10px;
+            height: 20vh;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(1, 1fr);
+
+        }
+    /**********************************************************************************/
+        .grid-third{
+            gap: 10px;
+            height: 20vh;
+            grid-template: 
+                "header header header header" 1fr /* 1fr: height of the row */
+                "content content content nav" 2fr
+                "footer footer footer footer" 1fr 
+                / 1fr 1fr 1fr 1fr /* width of each column */
+        }
+        .header-third{
+            grid-area: header;
+        }
+        .content-third{
+            grid-area: content;
+        }
+        .nav-third{
+            grid-area: nav;
+        }
+        .footer-third{
+            grid-area: footer;
+        }
+     /**********************************************************************************/
+        .grid-fourth{
+            gap: 10px;
+            height: 20vh;
+            grid-template: 
+                [header-start] "header header header header" 1fr [header-end] 
+                [content-start] "content content content nav" 2fr [content-end]
+                [footer-start] "footer footer footer footer" 1fr [footer-end]
+                / 1fr 1fr 1fr 1fr 
+        }
+        .header-fourth{
+            grid-area: header;
+        }
+        .content-fourth{
+            grid-area: content;
+        }
+        .nav-fourth{
+            grid-area: nav;
+        }
+        .footer-fourth{
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>0. Grid Template </h3>
+    <div class="grid grid-first">
+        <div class="header header-first"></div>
+        <div class="content content-first"></div>
+        <div class="nav nav-first"></div>
+        <div class="footer footer-first"></div>
+    </div>
+    <h1>0. Grid Template - row height</h3>
+        <p class="code">
+            gap: 10px; <br/>
+            grid-template-columns: repeat(4,1fr);<br/>
+            grid-template-rows: repeat(4, 1fr);<br/>
+        </p>
+        <p> In this case, there isn't height in grid-rows.</p>
+        <img src="ex001.png"/>
+        <p> So it is necessary to give height in grid-rows.</p>
+        <p class="code">
+            gap: 10px; <br/>
+            height: 40vh;<br/>
+            grid-template-columns: repeat(4,1fr);<br/>
+            grid-template-rows: repeat(4, 1fr);<br/>
+        </p>
+    <div class="grid grid-second">
+        <div class="header header-second"></div>
+        <div class="content content-second"></div>
+        <div class="nav nav-second"></div>
+        <div class="footer footer-second"></div>
+    </div>
+    <h1>1. Grid Template - SUPER SHORTCUT</h3>
+    <div class="grid grid-third">
+        <div class="header header-third"></div>
+        <div class="content content-third"></div>
+        <div class="nav nav-third"></div>
+        <div class="footer footer-third"></div>
+    </div>
+    <h1>1-(2). Grid Template - SUPER SHORTCUT : Giving Name </h3>
+    <div class="grid grid-fourth">
+        <div class="header header-fourth"></div>
+        <div class="content content-fourth"></div>
+        <div class="nav nav-fourth"></div>
+        <div class="footer footer-fourth"></div>
+    </div>
+</body>
+
+</html>
