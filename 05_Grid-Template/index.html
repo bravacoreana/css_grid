@@ -5,22 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css-grid-styles/styles.css">
+    <link rel="stylesheet" href="/common-styles/styles.css">
     <style>
+        /* 0. Grid Template */
+        
         .grid-first{
             gap: 10px;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);  /*fraction: as space as possible*/
             grid-template-rows: repeat(1, 100px);
         }
-    /**********************************************************************************/
+
+        /* 1. Grid Template = row height */
+        
         .grid-second{
             gap: 10px;
-            height: 20vh;
+            height: 20vh;   /* YOU NEED HEIGHT! */
             grid-template-columns: repeat(4,1fr);
             grid-template-rows: repeat(1, 1fr);
 
         }
-    /**********************************************************************************/
+
+        /* 2. Grid Template - SUPER SHORTCUT */
+        
         .grid-third{
             gap: 10px;
             height: 20vh;
@@ -42,14 +48,16 @@
         .footer-third{
             grid-area: footer;
         }
-     /**********************************************************************************/
+
+        /* 2-1. Grid Template - SUPER SHORTCUT : Giving Name */
+        
         .grid-fourth{
             gap: 10px;
             height: 20vh;
             grid-template: 
-                [header-start] "header header header header" 1fr [header-end] 
+                [header-start] "header header header header" 1fr [header-end]
                 [content-start] "content content content nav" 2fr [content-end]
-                [footer-start] "footer footer footer footer" 1fr [footer-end]
+                [footer-start] "footer footer footer footer" 1fr [footer-end] 
                 / 1fr 1fr 1fr 1fr 
         }
         .header-fourth{

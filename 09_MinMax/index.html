@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/common-styles/styles.css" />
+    <style>
+      .grid-first {
+        font-size: 24px;
+        gap: 10px;
+        grid-template-columns: repeat(9, minmax(100px, 1fr));
+        grid-template-rows: repeat(4, 100px);
+      }
+      .item:nth-child(odd) {
+        background-color: #00cec9;
+      }
+      .item:nth-child(even) {
+        background-color: #a29bfe;
+      }
+      /**********************************************************************************/
+    </style>
+  </head>
+
+  <body>
+    <h1>Auto Columns and Rows</h1>
+    <h3>grid-auto-rows</h3>
+    <div class="grid grid-first">
+      <div class="item item-first">1</div>
+      <div class="item item-first">2</div>
+      <div class="item item-first">3</div>
+      <div class="item item-first">4</div>
+      <div class="item item-first">5</div>
+      <div class="item item-first">6</div>
+      <div class="item item-first">7</div>
+      <div class="item item-first">8</div>
+      <div class="item item-first">9</div>
+      <div class="item item-first">10</div>
+      <div class="item item-first">11</div>
+      <div class="item item-first">12</div>
+    </div>
+  </body>
+</html>
